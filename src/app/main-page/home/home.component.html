@@ -15,14 +15,16 @@
         <div class="content-wrapper">
           <div>
             <h1 class="title">
-                Your Own <span class="gold-color">IT-Development</span> Office in Ukraine
+                Best <span class="gold-color">Outstaffing</span> in Ukraine!
+              <p>We will hire you extra professional software developers and teams.</p>
             </h1>
           </div>
           <div class="description">
             <p>
               We are Ukrainian company  providing outsourcing and outstaffing services to  foreign clients.  find, interview, select the best specialists on your request and orchestrate their work in the best way.
-              <br />Get rid of all HR, office and secretary issues!<br />We make business easier!
+              <br />Get rid of all HR, office and secretary issues!<br />
             </p>
+            <h3>We make business easier!</h3>
             <button class="btn-default-red btn" (click)="scrollToElement(contactus)">WORK WITH US</button>
           </div>
         </div>
@@ -32,6 +34,22 @@
         <div class="cards">
 
           <div class="cards-items row justify-content-center full-width">
+
+            <div class="card-item" (click)="showServiceDetails('recruitment_process')">
+
+              <div class="arrow-divider">
+                <div class="arrow"></div>
+              </div>
+
+              <div class="container-continer">
+                <img src="assets/images/logos/group.svg" alt="">
+                <div class="description">
+                  <span class="gold-color">
+                    Recruitment Process
+                  </span>
+                </div>
+              </div>
+            </div>
 
             <div class="card-item" (click)="showServiceDetails('real_estate')">
 
@@ -43,7 +61,7 @@
                 <img src="assets/images/logos/hous.svg" alt="">
                 <div class="description">
                   <span class="gold-color">
-                    Real Estate
+                    Perfect Office Spaces
                   </span>
                 </div>
               </div>
@@ -59,23 +77,7 @@
                 <img src="assets/images/logos/money.svg" alt="">
                 <div class="description">
                   <span class="gold-color">
-                    Finance & Accounting
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-item" (click)="showServiceDetails('recruitment_process')">
-
-              <div class="arrow-divider">
-                <div class="arrow"></div>
-              </div>
-
-              <div class="container-continer">
-                <img src="assets/images/logos/group.svg" alt="">
-                <div class="description">
-                  <span class="gold-color">
-                    Recruitment Process
+                    Documentation & Financials
                   </span>
                 </div>
               </div>
@@ -115,48 +117,8 @@
           </div>
 
           <div class="slide-cards full-width">
+
             <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]="3000">
-              <mdb-carousel-item>
-                <div class="slide-card-item">
-
-                  <div class="container-continer">
-                    <img src="assets/images/logos/hous.svg" alt="">
-                    <div class="description">
-                      <span class="gold-color">
-                        Real Estate
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </mdb-carousel-item>
-
-              <mdb-carousel-item>
-                <div class="slide-card-item">
-
-                  <div class="container-continer">
-                    <img src="assets/images/logos/money.svg" alt="">
-                    <div class="description">
-                      <span class="gold-color">
-                        Finance & Accounting
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </mdb-carousel-item>
-
-              <mdb-carousel-item>
-                <div class="slide-card-item">
-
-                  <div class="container-continer">
-                    <img src="assets/images/logos/money.svg" alt="">
-                    <div class="description">
-                      <span class="gold-color">
-                        Finance & Accounting
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </mdb-carousel-item>
 
               <mdb-carousel-item>
                 <div class="slide-card-item">
@@ -166,6 +128,34 @@
                     <div class="description">
                       <span class="gold-color">
                         Recruitment Process
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </mdb-carousel-item>
+
+              <mdb-carousel-item>
+                <div class="slide-card-item">
+
+                  <div class="container-continer">
+                    <img src="assets/images/logos/hous.svg" alt="">
+                    <div class="description">
+                      <span class="gold-color">
+                        Perfect Office Spaces
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </mdb-carousel-item>
+
+              <mdb-carousel-item>
+                <div class="slide-card-item">
+
+                  <div class="container-continer">
+                    <img src="assets/images/logos/money.svg" alt="">
+                    <div class="description">
+                      <span class="gold-color">
+                        Documentation & Financials
                       </span>
                     </div>
                   </div>
