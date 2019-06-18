@@ -1,0 +1,87 @@
+<div class="container-wrapper">
+
+  <div class="background-container">
+    <img src="assets/images/contact-bg.jpg" alt="">
+  </div>
+
+  <div class="content-container">
+
+      <div class="row">
+        <div class="col-xl-6 custom-col-form">
+          <div class="header">
+            <h6 class="title text-left">Contact Us</h6>
+
+            <p class="description text-left">We would be delighted to hear from you and discuss how we can help. We'll
+              get
+              back to
+              you as soon as possible!</p>
+          </div>
+
+          <div class="form-Container">
+            <div [formGroup]="contactForm">
+              <mat-form-field class="full-width">
+                <input placeholder="{{ 'Name' }}" formControlName="name" matInput>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <input placeholder="{{ 'Email address' }}" formControlName="email" matInput>
+              </mat-form-field>
+
+              <mat-form-field class="full-width message-field">
+                <textarea placeholder="{{ 'Message' }}" formControlName="message" matInput></textarea>
+              </mat-form-field>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 custom-col-infos">
+          <div>
+            <div class="content d-flex">
+              <mdb-icon class="icon color-red" fas icon="envelope"></mdb-icon>
+
+              <div class="description">
+                <h6 class="head-contact-param">Email us</h6>
+                <span>
+                    info@iteam.co.ua
+                </span>
+              </div>
+            </div>
+
+            <div class="content d-flex">
+              <mdb-icon class="icon color-red" fas icon="phone"></mdb-icon>
+              <div class="description">
+                <h6 class="head-contact-param">Call us</h6>
+                <div>
+                  <span>
+                    +38 (063) 262-20-93
+                  </span>
+                </div>
+
+                <div>
+                  <span>
+                    +38 (097) 951-81-99
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="content d-flex">
+              <mdb-icon class="icon color-red" fas icon="map-marker-alt"></mdb-icon>
+
+              <div class="description">
+                <span>
+                  Kyiv, Ukraine
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <button class="btn-default-red send-msg-btn" (click)="sendEmail()">
+          {{ 'Send message' | uppercase }}
+        </button>
+      </div>
+  </div>
+</div>

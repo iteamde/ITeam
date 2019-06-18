@@ -1,0 +1,8 @@
+@mixin btn-gradient-red() {
+  background: gradient(180deg, #E93535 0%, #A81212 100%);
+}
+
+@mixin btn-radius() {
+  border-radius: 33px;
+}
+

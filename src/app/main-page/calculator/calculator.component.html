@@ -1,0 +1,163 @@
+<div class="content-container">
+
+  <div class="head-wrapper">
+    <app-head [title]="'R&D CALCULATOR'"
+              [description]="'Create a perfect team for your business! Make your choice.'">
+    </app-head>
+  </div>
+
+  <div class="main-content gray-gradient-bg">
+
+    <div [formGroup]="teamForm" class="row content-wrapper team-form">
+      <mat-form-field class="col-md-4">
+        <mat-label>Select specification</mat-label>
+        <mat-select formControlName="specification">
+          <mat-option *ngFor="let spec of pricesConstants.specification" [value]="spec">
+            {{ spec.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field class="col-md-3">
+        <mat-label>Select level (skill)</mat-label>
+          <mat-select formControlName="level">
+            <mat-option *ngFor="let level of pricesConstants.level" [value]="level.levelName">
+              {{ level.levelName }}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field class="col-md-2">
+        <mat-label>Number</mat-label>
+        <mat-select formControlName="count">
+          <mat-option *ngFor="let number of pricesConstants.number" [value]="number">
+            {{ number }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <div class="col-md-3 btn-container">
+        <button class="btn-default-red send-msg-btn" (click)="addToMyTeam()">
+          {{ 'add to my team' | uppercase }}
+        </button>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+
+      <div class="table-wrapper" *ngIf="teamTable.length">
+        <div class="table-header">
+          <h3>Meet your team:</h3>
+        </div>
+    
+        <div class="custom-row table-container-wrapper">
+          <div class="table-container">
+            <div class="custom-row">
+              <div class="table-content-wrapper">
+                <div class="table-content class-large-table">
+                  <div class="headers custom-row">
+                    <div class="position-cell">Position</div>
+                    <div class="number-cell">Number</div>
+                    <div class="cost-in-ukraine-cell">Cost in Ukraine *</div>
+                    <div class="cost-in-israel-cell">Cost in Israel</div>
+                    <div class="saving-cell">Saving</div>
+                  </div>
+
+                  <div class="table-data-cells custom-row" *ngFor="let item of teamTable; let i=index;">
+                    <div class="table-data-cells custom-row">
+                      <div class="position-cell">{{ item.position }}</div>
+                      <div class="number-cell">{{ item.number }}</div>
+                      <div class="cost-in-ukraine-cell">{{ item.costInUa }}</div>
+                      <div class="cost-in-israel-cell">{{ item.costInIsrael }}</div>
+                      <div class="saving-cell">{{ item.saving }}</div>
+
+                      <div class="control">
+                        <div class="delete-btn" (click)="deleteItem(i)">
+                          <img src="assets/images/logos/delete-icon.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="class-table-small">
+
+                  <div class="table-card" *ngFor="let item of teamTable; let i=index;">
+                    <div class="item row">
+                      <div class="col-5 info">Position</div>
+                      <div class="col-7 value">{{ item.position }}</div>
+                    </div>
+                    <div class="item row">
+                      <div class="col-5 info">Number</div>
+                      <div class="col-7 value">{{ item.number }}</div>
+                    </div>
+                    <div class="item row">
+                      <div class="col-5 info">Cost in Ukraine *</div>
+                      <div class="col-7 value">{{ item.costInUa }}</div>
+                    </div>
+                    <div class="item row">
+                      <div class="col-5 info">Cost in Israel</div>
+                      <div class="col-7 value">{{ item.costInIsrael }}</div>
+                    </div>
+                    <div class="item row">
+                      <div class="col-5 info">Saving</div>
+                      <div class="col-7 value">{{ item.saving }}</div>
+                    </div>
+                    <div class="delete-btn" (click)="deleteItem(i)"> 
+                      <img src="assets/images/logos/delete-icon.svg" alt="">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="total" *ngIf="totalSaveAmount">
+                  <span>Total save per month: <span class="value">${{ totalSaveAmount }}</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+              
+          <div class="table-info">
+            <ul>
+              <li class="general-list-item">Costs mean establishing and maintaining R&D office from scratch:</li>
+              <li>Real Estate</li>
+              <li>Recruitment services;</li>
+              <li>Payroll and accounting;</li>
+              <li>Legal & Compliance;</li>
+              <li>Tax.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-container">
+    <div class="head-wrapper">
+      <app-head [title]="'Lets get in touch to discuss the detailed calculation for your team'"
+                [titleFontSize]="28"
+                [description]="'Send us your job descriptions and we will find right people'">
+      </app-head>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="row" class="row" [formGroup]="contactForm">
+        <mat-form-field class="col-md-4">
+          <input placeholder="{{ 'Your name' }}" formControlName="name" matInput>
+        </mat-form-field>
+                
+        <mat-form-field class="col-md-4">
+          <input placeholder="{{ 'Your email' }}" formControlName="email" matInput>
+        </mat-form-field>
+      
+        <div class="col-md-4 btn-wrapper">
+          <button class="btn-default-red send-msg-btn" (click)="sendEmail()">
+            {{ 'find developers' | uppercase }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

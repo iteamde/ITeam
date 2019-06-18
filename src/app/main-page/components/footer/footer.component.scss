@@ -1,0 +1,26 @@
+@import '~assets/styles/variables';
+
+.footer-container {
+  height: 160px;
+  width: 100%;
+  max-width: 100%;
+  background-color: $primaryDarkColor;
+
+  .footer-content {
+    width: 50%;
+    padding-top: 35px;
+    min-width: 300px;
+    margin: 0 auto;
+
+    .description {
+      text-align: center;
+      font-size: $smallFontSize;
+      color: $primaryLightColor;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

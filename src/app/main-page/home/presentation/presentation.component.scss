@@ -1,0 +1,113 @@
+@import '~assets/styles/variables';
+
+.content-container {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 152px;
+
+  .content-background {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .background-overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $backgroundDark;
+  }
+
+  @media screen and (max-width: 1920px){
+    .content-background {
+      width: 1920px;
+      max-width: 1920px;
+    }
+  };
+}
+
+.content {
+  position: relative;
+  z-index: 100;
+
+  .hr {
+    width: 133px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid $primaryLightColor;
+  }
+
+  .content-header {
+    margin-top: 100px;
+    font-size: $extraBigFontSize;
+    color: $primaryLightColor;
+    text-align: center;
+
+    .title {
+      font-size: $extraBigFontSize;
+    }
+
+    .description {
+      color: $primaryLightColor;
+      font-size: 18px;
+      width: 82%;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+}
+
+.description-items {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.description-item {
+  width: 100%;
+  display: flex;
+  
+  .logo-container {
+    width: 10%;
+  }
+
+  .description-content {
+    width: 90%;
+    color: $primaryLightColor;
+    font-size: 18px
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .content-container {
+
+  }
+    
+  .description-item {
+    
+    .logo-container {
+      width: 15%;
+    }
+  
+    .description-content {
+      width: 85%;
+    }
+  }
+}

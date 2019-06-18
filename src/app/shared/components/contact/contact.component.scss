@@ -1,0 +1,253 @@
+@import "~assets/styles/variables";
+
+.container-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  padding: 70px 80px 60px 80px;
+  background-color: #fff;
+
+  .background-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+
+    img {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 50;
+    }
+
+    @media screen and (max-width: 1920px) {
+      img {
+        width: 1920px;
+      }
+    }
+  }
+
+  .content-container {
+    position: relative;
+    z-index: 52;
+    width: 900px;
+    margin: 4.5rem auto;
+    box-shadow: 5px 4px 35px $primaryDarkColor;
+    border-radius: 10px;
+    background: $primaryLightColor;
+    padding: 4.5rem 4rem;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .content-container {
+      z-index: 50;
+      width: 800px;
+      margin: 1rem auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0;
+
+    .content-container {
+      z-index: 50;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+      padding: 90px 15px 20px 15px;
+    }
+  }
+}
+
+.header {
+  text-align: center;
+
+  .title {
+    font-size: $largeFontSize;
+    color: $primaryDarkColor;
+  }
+
+  .hr {
+    margin: 0 auto;
+    margin-top: 17px;
+    margin-bottom: 38px;
+  }
+
+  .description {
+    font-size: $smallFontSize;
+    color: $primaryDarkColor;
+  }
+}
+
+.content {
+  margin: 0 3rem 2rem;
+  .form-Container {
+    background: $transparentLightBackground;
+    max-width: 100%;
+    height: 380px;
+    margin: 0 auto;
+  }
+
+  .message-field {
+    margin-top: 65px;
+  }
+
+  .fas {
+    font-size: 40px !important;
+    margin-right: 30px;
+  }
+
+  .info {
+    text-align: center;
+
+    .icon {
+      position: absolute;
+      left: 5px;
+    }
+
+    .title {
+      font-size: $largeFontSize;
+      width: 280px;
+      margin: 0 auto;
+      margin-block-end: 15px;
+      text-align: left;
+    }
+
+    .content {
+      position: relative;
+      width: 280px;
+
+      .head-contact-param {
+        font-weight: 500;
+      }
+
+      .description {
+        margin-bottom: 20px;
+        padding-left: 30px;
+        text-align: left;
+        font-size: $regularFontSize;
+      }
+    }
+
+    @media screen and (max-width: 1280px) {
+      .content {
+        margin: 0 7rem;
+        .description {
+          font-size: $smallFontSize;
+        }
+      }
+    }
+  }
+
+  .icon-container {
+    width: 100%;
+    max-width: 100%;
+    font-size: 38px;
+
+    &:first-child {
+      margin-top: 50px;
+    }
+
+    &:last-child {
+      margin-top: 60px;
+    }
+  }
+
+  .icon-wrapper {
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .icon-element {
+    display: inline-block;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid $red;
+    color: $red;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .form-Container {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .custom-col-info {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-bottom: 18px;
+    }
+
+    .custom-col-form {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-bottom: 18px;
+    }
+
+    .custom-col-icon {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-bottom: 18px;
+    }
+
+    .info {
+      border: none !important;
+    }
+  }
+}
+
+.send-msg-btn {
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .container-wrapper {
+    .content-container {
+      padding-bottom: 60px;
+    }
+  }
+
+  .icons-container {
+    text-align: center;
+    max-width: 100%;
+
+    .icon-wrapper {
+      display: flex;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    .icon-container {
+      display: inline-block;
+      margin-top: 30px;
+      text-align: center;
+
+      &:first-child {
+        margin-right: 60px;
+      }
+    }
+  }
+
+  .btn-default-red {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .content {
+    margin: 1rem 0;
+  }
+}

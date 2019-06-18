@@ -1,0 +1,169 @@
+@import "~assets/styles/variables";
+
+.content-container {
+  background-color: $primaryLightColor;
+  overflow: hidden;
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 140px 80px 60px 80px;
+
+  .header {
+    margin-bottom: 80px;
+    text-align: center;
+    color: $primaryDarkColor;
+
+    .title {
+      font-size: $extraBigFontSize;
+    }
+
+    .hr {
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+
+    .description {
+      font-size: 20px;
+    }
+  }
+
+  .card-item {
+    width: 100%;
+    max-width: 100%;
+    min-height: 300px;
+    position: relative;
+    margin-top: 40px;
+    transition: 0.5s;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:hover {
+      border: 1px solid solid;
+      box-shadow: 1px 1px 7px black;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .side-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+
+      img.bg {
+        position: absolute;
+        z-index: 52;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .logo {
+        z-index: 57;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .bg-overlay {
+        z-index: 54;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: $transparentBlackBackground;
+      }
+    }
+
+    .card-content {
+      margin-left: 300px;
+      padding: 48px 74px 15px 48px;
+      text-align: left;
+    }
+
+    .card-title {
+      font-size: $bigFontSize;
+      margin-bottom: 40px;
+    }
+
+    .description {
+      font-size: 20px;
+      color: $primaryDarkColor;
+      span {
+        color: cornflowerblue;
+        font-style: italic;
+      }
+    }
+
+    @media screen and (max-width: 1600px) {
+    }
+
+    @media screen and (max-width: 1450px) {
+      .card-content {
+        padding-top: 28px;
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      .card-title {
+        margin-bottom: 18px;
+      }
+    }
+
+    @media screen and (max-width: 1280px) {
+      .description {
+        font-size: 18px;
+      }
+    }
+
+    @media screen and (max-width: 990px) {
+      padding-top: 130px;
+
+      .side-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 116px;
+        overflow: hidden;
+
+        img.bg {
+          height: auto;
+        }
+      }
+
+      .card-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 5px 15px 5px;
+        text-align: center;
+      }
+
+      .card-title {
+        font-size: $bigFontSize;
+        margin-bottom: 40px;
+      }
+
+      .description {
+        font-size: 20px;
+        color: $primaryDarkColor;
+      }
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    padding: 90px 32px 37px;
+    .header .title {
+        font-size: $bigFontSize;
+    }
+  }
+}

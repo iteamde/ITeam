@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+<div class="route-container" [@routeAnimations]="prepareRoute(outlet)" 
+     [ngClass]="{'router-position-absolute': isHomePage}">
+  <router-outlet  #outlet="outlet"></router-outlet>
+
+  <app-footer>
+  </app-footer>
+</div>

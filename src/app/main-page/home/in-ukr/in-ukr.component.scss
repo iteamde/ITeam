@@ -1,0 +1,114 @@
+@import '~assets/styles/variables';
+
+:host {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.content {
+  position: relative;
+  min-height: 738px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #fff;
+
+  .content-background {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 25px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .header {
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    font-size: $extraBigFontSize;
+    color: $primaryDarkColor;
+
+    .hr {
+      width: 50%;
+      height: 1px;
+      border: 1px solid #C4C4C4;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+  }
+
+  .content-container {
+    position: relative;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    display: flex;
+    z-index: 100;
+    margin-bottom: 25px;
+    text-align: center;
+
+    .group-item {
+      width: 300px;
+    }
+
+    .head-title {
+      font-size: $extraBigTitle;
+    }
+
+    .description {
+      .title {
+        font-size: 31px
+      }
+
+      p {
+        font-size: $smallFontSize;
+        color: $primaryDarkColor;
+      }
+    }
+  }
+
+  ::ng-deep .btn-work {
+    font-size: $largeFontSize;
+    display: block;
+    margin: 0 auto; 
+    margin-top: 70px; 
+  }
+
+  @media screen and (max-width: 1366px) {
+
+    .header {
+      margin-bottom: 40px;
+    }
+
+    .content-container {
+  
+      .head-title {
+        font-size: $extraBigFontSize;
+      }
+  
+      .description {
+        .title {
+          font-size: $bigFontSize;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .header {
+      margin-top: 70px;
+    }
+
+    .content-background {
+      left: 0px;  
+      top: 50%;
+      transform: translate(-37%, -50%);
+    }
+  }
+}

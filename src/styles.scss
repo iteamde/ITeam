@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~assets/styles/variables';
+@import '~assets/styles/mixins';
+@import '../node_modules/@angular/material/theming';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~ngx-toastr/toastr';
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: $primaryDarkColor;
+  scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Alef', sans-serif;
+}
+
+.gold-color {
+  color: $gold;
+}
+
+.color-red {
+  color:$red;
+}
+
+.btn-default-red {
+  //@include $btn-radius();
+  //@include $btn-gradient-red();
+  border-radius: 33px;
+  background: linear-gradient(2deg, rgba(168,18,18,1) 0%, rgba(233,53,53,1) 100%);
+
+  text-decoration: none;
+  color: $primaryLightColor;
+  border: none;
+  padding: 17px 68px;
+  cursor: pointer;
+}
+
+.hr {
+  width: 133px;
+  height: 1px;
+  border: 1px solid $grey;
+}
+
+.gray-gradient-bg {
+  background: linear-gradient(180deg, #E6EAEF 0%, rgba(230, 234, 239, 0.2) 100%);
+}
+
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.spacer-bottom {
+ margin-bottom: 33px;
+}
+
+.carousel-control-next-icon {
+  height: 92px !important;
+  width: 47px !important;
+  background-image: url('assets/images/slider-controls/arrow-right.svg') !important;
+}
+
+.carousel-control-prev-icon {
+  height: 92px !important;
+  width: 47px !important;
+  background-image: url('assets/images/slider-controls/arrow-left.svg') !important;
+}
+
+.carousel-indicators {
+  li {
+    background-color: #E6EAEF !important;
+  }
+
+  li.active {
+    background-color: #D1C661 !important;
+  }
+}
